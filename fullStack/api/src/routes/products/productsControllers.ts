@@ -10,6 +10,7 @@ export function getProduct(req: Request , res: Response) {
 
 export function createProduct(req: Request , res: Response) {
   res.send('New Product');
+  console.log(req.body);
 }
 
 export function updateProduct(req: Request , res: Response) {
