@@ -9,4 +9,5 @@ export const productsTable = pgTable("products", {
   category: varchar({ length: 255 }).notNull(),
   description: varchar({ length: 255 }).notNull(),
   image: varchar({ length: 255 }).notNull(),
+  quantity: integer().notNull(),
 });

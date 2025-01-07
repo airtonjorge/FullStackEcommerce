@@ -1,5 +1,5 @@
 {
-  "id": "7ee91d4e-e3e2-4ac1-bf2f-1118e5ca959c",
+  "id": "bc1c2293-f504-4aad-9eeb-8a0794d81bc9",
   "prevId": "00000000-0000-0000-0000-000000000000",
   "version": "7",
   "dialect": "postgresql",
@@ -52,6 +52,12 @@
         "image": {
           "name": "image",
           "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "quantity": {
+          "name": "quantity",
+          "type": "integer",
           "primaryKey": false,
           "notNull": true
         }
