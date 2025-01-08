@@ -15,6 +15,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@genezio/types": "^1.0.20",
     "bcryptjs": "^2.4.3",
     "drizzle-orm": "^0.38.3",
     "drizzle-zod": "^0.6.1",
@@ -22,6 +23,7 @@
     "jsonwebtoken": "^9.0.2",
     "lodash": "^4.17.21",
     "pg": "^8.13.1",
+    "serverless-http": "^3.2.0",
     "zod": "^3.24.1"
   },
   "devDependencies": {

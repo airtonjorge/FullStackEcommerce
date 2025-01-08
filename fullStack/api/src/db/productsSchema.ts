@@ -1,4 +1,4 @@
-import { integer, pgTable, varchar } from "drizzle-orm/pg-core";
+import { integer, pgTable, varchar} from "drizzle-orm/pg-core";
 import { createInsertSchema } from 'drizzle-zod';
 
 
@@ -12,6 +12,6 @@ export const productsTable = pgTable("products", {
   quantity: integer().notNull(),
 });
 
-export const createProductSchema = createInsertSchema(productsTable).omit({ id: true });
+export const createProductSchema = createInsertSchema(productsTable).omit({ id: true as never });
 
-export const updateProductSchema = createInsertSchema(productsTable).omit({ id: true }).partial();
+export const updateProductSchema = createInsertSchema(productsTable).omit({ id: true as never }).partial();

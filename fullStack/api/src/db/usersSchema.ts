@@ -11,5 +11,5 @@ export const usersTable = pgTable("users", {
   role: varchar({ length: 255 }).notNull().default('user'),
 });
 
-export const createUserSchema = createInsertSchema(usersTable).omit({ id: true, role: true });
+export const createUserSchema = createInsertSchema(usersTable).omit({ id: true as never , role: true });
 export const loginSchema = createInsertSchema(usersTable).pick({ email: true, password: true });
