@@ -1,9 +1,9 @@
 import { Router } from "express";
-import { createOrder } from "./ordersController";
 import { validateData } from "../../middlewares/validationMiddleware.js";
 import { insertOrderWithItemsSchema} from "../../db/ordersSchema.js";
-import { verifyToken } from "../..//middlewares/authMiddleware";
-import { listOrders, getOrder, updateOrderSchema } from "./ordersController";
+import { verifyToken } from "../..//middlewares/authMiddleware.js";
+//@ts-ignore
+import {createOrder, listOrders, getOrder, updateOrderSchema } from "./ordersController.js";
 
 const router = Router();
 

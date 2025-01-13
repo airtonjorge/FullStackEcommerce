@@ -8,8 +8,8 @@ export const usersTable = pgTable("users", {
   email: varchar({ length: 255 }).notNull().unique(),
   password: varchar({ length: 255 }).notNull(),
   address: varchar({ length: 255 }).notNull(),
-  role: varchar({ length: 255 }).notNull().default('user'),
+  role: varchar({ length: 255 }).notNull(),
 });
-
-export const createUserSchema = createInsertSchema(usersTable).omit({ id: true as never , role: true });
+//@ts-ignore
+export const createUserSchema = createInsertSchema(usersTable).omit({ id: true, role: true });
 export const loginSchema = createInsertSchema(usersTable).pick({ email: true, password: true });
